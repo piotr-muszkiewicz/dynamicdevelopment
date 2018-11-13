@@ -1,0 +1,103 @@
+.invest-d {
+  &__top {
+    img {
+      max-width: 100%;
+    }
+  }
+  &__title {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    padding-top: 50px;
+    @include breakpoint(mobile) {
+      display: block;
+      overflow: hidden;
+      padding-top: 25px;
+    }
+    .helper {
+      width: 850px;
+      padding-right: 20px;
+      overflow: hidden;
+      @include breakpoint(tablet) {
+        width: 100%;
+      }
+      img {
+        float: left;
+        max-width: 100px;
+        margin-right: 50px;
+        @include breakpoint(mobile) {
+          margin-right: 20px;
+        }
+        @include breakpoint(mobile) {
+          float: none;
+          display: block;
+          margin: 0 auto;
+        }
+      }
+      h2 {
+        font-size: 62px;
+        line-height: 62px;
+        color: $blue;
+        margin: 15px 0;
+        @include breakpoint(laptop) {
+          font-size: 48px;
+          line-height: 48px;
+        }
+        @include breakpoint(tablet) {
+          width: 100%;
+        }
+        @include breakpoint(mobile) {
+          font-size: 36px;
+          line-height: 36px;
+
+        }
+        @include breakpoint(mobileonly) {
+          margin-top: 15px;
+        }
+      }
+      p {
+        margin: 0 0 0 150px;
+        font-size: 38px;
+        color: $blue;
+        font-weight: 300;
+        width: 100%;
+        @include breakpoint(laptop) {
+          font-size: 24px;
+        }
+        @include breakpoint(tablet) {
+          margin: 0 0;
+        }
+        @include breakpoint(mobile) {
+          font-size: 20px;
+        }
+      }
+    }
+    .btn {
+      float: right;
+      background: $orange;
+      border: none;
+      color: #FFF;
+      font-size: 24px;
+      line-height: 24px;
+      font-weight: bold;
+      padding: 13px 25px;
+      text-transform: uppercase;
+      transition: all 0.3s;
+      text-decoration: none;
+      white-space: nowrap;
+      @include breakpoint(tablet) {
+        font-size: 20px;
+      }
+      @include breakpoint(mobile) {
+        display: block;
+        float: none;
+        text-align: center;
+        margin-top: 25px;
+      }
+      &:hover {
+        opacity: 0.9;
+      }
+    }
+  }
+
+}

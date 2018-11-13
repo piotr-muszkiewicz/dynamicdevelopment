@@ -1,0 +1,262 @@
+.contact {
+  padding-top: 30px;
+  @include breakpoint(tablet) {
+    padding-top: 45px;
+  }
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+    background: #eaeaea;
+    padding: 80px;
+    flex-wrap: wrap;
+    @include breakpoint(tablet) {
+      padding: 30px;
+      margin: 0 -15px;
+    }
+  }
+  &__left {
+    width: 360/1010*100%;
+    border-right: 2px solid $blue;
+    display: flex;
+    align-items: center;
+    @include breakpoint(tablet) {
+      width: 100%;
+      border: none;
+      display: none;
+    }
+    img {
+      width: 250px;
+      height: 75px;
+    }
+  }
+  &__right {
+    width: 560/1010*100%;
+    @include breakpoint(tablet) {
+      width: 100%;
+    }
+    h2 {
+      margin: 0 0;
+      font-weight: 300;
+      font-size: 38px;
+      color: #25253a;
+      @include breakpoint(tablet) {
+        font-size: 32px;
+      }
+    }
+  }
+  &__box {
+    margin-top: 44px;
+    padding-left: 65px;
+    position: relative;
+    p {
+      font-size: 20px;
+      font-weight: 300;
+      line-height: 33px;
+      margin: 0 0;
+      color: $blue;
+      @include breakpoint(tablet) {
+        font-size: 18px;
+        line-height: 26px;
+      }
+      a {
+        text-decoration: none;
+        color: $blue;
+        &:hover {
+          color: $orange;
+        }
+      }
+    }
+    i {
+      position: absolute;
+      left: 0;
+      width: 60px;
+      text-align: center;
+      top:0;
+
+    }
+  }
+  .iframe {
+    @include breakpoint(tablet) {
+      margin: 0 -15px;
+    }
+    .gmap,
+    iframe {
+      width: 100%;
+      height: 455px;
+    }
+  }
+
+}
+
+.contact-form {
+  overflow: hidden;
+  &__title {
+    font-size: 16px;
+    font-weight: 300;
+    letter-spacing: 11px;
+    text-transform: uppercase;
+    color: #25253a;
+    margin: 54px 0 48px 0
+  }
+  &__wrap {
+    position: relative;
+    margin-bottom: 34px;
+    textarea,
+    input:not([type="submit"]) {
+      width: 100%;
+      background: #eaeaea;
+      border: none;
+      height: 40px;
+    }
+    textarea {
+      height: 200px;
+    }
+    label {
+      text-transform: uppercase;
+      font-weight: 300;
+      position: absolute;
+      left: 0;
+      top:0;
+      background: $blue;
+      height: 40px;
+      line-height: 40px;
+      color: #FFF;
+      font-size: 19px;
+      padding: 0 5px 0 26px;
+      @include breakpoint(tablet) {
+        font-size: 16px;
+        padding-left: 15px;
+        padding-right: 0;
+      }
+      &:after {
+        position: absolute;
+        background: url("../images/svg/menu-right.png");
+        width: 25px;
+        top:0;
+        left: 100%;
+        bottom: 0;
+        content: "";
+        background-size: 100% 100%;
+      }
+    }
+    &.input1 {
+      input {
+        padding: 0 0 0 105px;
+        @include breakpoint(mobile) {
+          padding: 0 0 0 80px;
+        }
+      }
+    }
+    &.input2 {
+      input {
+        padding: 0 0 0 120px;
+        @include breakpoint(mobile) {
+          padding: 0 0 0 95px;
+        }
+      }
+    }
+    &.input3 {
+      input {
+        padding: 0 0 0 125px;
+        @include breakpoint(mobile) {
+          padding: 0 0 0 100px;
+        }
+      }
+    }
+    &.input4 {
+      textarea {
+        padding: 51px 10px 10px 10px;
+      }
+    }
+  }
+  input[type="submit"] {
+    float: right;
+    background: $orange;
+    border: none;
+    color: #FFF;
+    font-size: 24px;
+    line-height: 24px;
+    font-weight: bold;
+    padding: 13px 54px;
+    text-transform: uppercase;
+    transition: all 0.3s;
+    outline: none;
+    @include breakpoint(tablet) {
+      font-size: 20px;
+    }
+    &:hover {
+      opacity: 0.9;
+    }
+  }
+  .wpcf7-form-control-wrap {
+    position: static !important;
+  }
+  span.wpcf7-not-valid-tip {
+    color: #f00;
+    font-size: 1em;
+    font-weight: normal;
+    display: block;
+    margin: 7px 0 -26px 0;
+    //position: absolute;
+    left: 0;
+    bottom: 0;
+  }
+  div.wpcf7-response-output {
+    margin: 50px 0 0 0 !important;
+    padding: 10px !important;
+  }
+  div.wpcf7-response-output {
+    margin: 2em 0.5em 1em;
+    padding: 0.2em 1em;
+    border: 2px solid #ff0000;
+    color: #ff0000;
+  }
+
+  div.wpcf7-mail-sent-ok {
+    border: 2px solid #398f14;
+    color: #398f14;
+  }
+
+  div.wpcf7-mail-sent-ng,
+  div.wpcf7-aborted {
+    border: 2px solid #ff0000;
+    color: #ff0000;
+  }
+
+  div.wpcf7-spam-blocked {
+    border: 2px solid #ffa500;
+    color: #ffa500;
+  }
+
+  div.wpcf7-validation-errors,
+  div.wpcf7-acceptance-missing {
+    border: 2px solid #f7e700;
+    color: #f7e700;
+  }
+  .checkbox-with-text {
+    display: flex;
+    margin: 20px 0 35px 0;
+    position: relative;
+    .wpcf7-form-control-wrap {
+      margin-right: 10px;
+      .wpcf7-list-item {
+        margin: 0;
+      }
+    }
+    > label {
+      font-size: 12px;
+      color: #25253a;
+      a {
+        color: #25253a;
+        &:hover {
+          color: $orange;
+        }
+      }
+    }
+  }
+  .wpcf7-not-valid-tip {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+  }
+}

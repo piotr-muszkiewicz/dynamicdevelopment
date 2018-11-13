@@ -1,0 +1,38 @@
+body {
+  font-family: 'Open Sans', sans-serif;
+  overflow-x: hidden;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+a {
+  transition: all 0.3s;
+}
+
+.wrapper {
+  float: left;
+  width: 100%;
+}
+.container {
+  max-width: 1200px;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.hr {
+  margin-top: 100px;
+  @include breakpoint(tablet) {
+    margin-top: 50px;
+  }
+  hr {
+    border: none;
+    border-top: 2px solid $blue;
+    @include breakpoint(tablet) {
+      margin: 0 -15px;
+    }
+  }
+}

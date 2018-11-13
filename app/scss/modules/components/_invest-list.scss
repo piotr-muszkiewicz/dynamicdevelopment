@@ -1,0 +1,188 @@
+.invest {
+  padding: 47px 0 15px 0 ;
+  @include breakpoint(tablet) {
+    padding: 30px 0 15px 0;
+  }
+  &__title {
+    font-size: 16px;
+    font-weight: 300;
+    letter-spacing: 11px;
+    text-transform: uppercase;
+    color: $blue;
+    margin: 14px 0 47px 0;
+    @include breakpoint(tablet) {
+      margin: 14px 0 32px 0;
+    }
+  }
+  &__list {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    @include breakpoint(mobile) {
+      display: block;
+    }
+    //&:after {
+    //  position: absolute;
+    //  left: 31.5%;
+    //  top:0;
+    //  bottom: 0;
+    //  width: 1px;
+    //  background: $blue;
+    //  content: "";
+    //  @include breakpoint(tablet) {
+    //    display: none;
+    //  }
+    //}
+    //&:before {
+    //  position: absolute;
+    //  left: 68.1%;
+    //  top:0;
+    //  bottom: 0;
+    //  width: 1px;
+    //  background: $blue;
+    //  content: "";
+    //  @include breakpoint(tablet) {
+    //    display: none;
+    //  }
+    //}
+  }
+  &__item {
+    text-decoration: none;
+    position: relative;
+    width: 26.5%;
+    display: inline-block;
+    vertical-align: top;
+    margin-right: 9.8%;
+    margin-bottom: 30px;
+    &:after {
+      position: absolute;
+      right: -20%;
+      top:0;
+      bottom: 0;
+      width: 1px;
+      background: $blue;
+      content: "";
+      @include breakpoint(tablet) {
+        display: none;
+      }
+    }
+    &:nth-child(3n) {
+      &:after {
+        display: none;
+      }
+      margin-right: -20px;
+    }
+
+    @include breakpoint(tablet) {
+      width: 30.5%;
+      margin-right: 4%;
+    }
+    @include breakpoint(mobile) {
+      margin: 0 auto 40px auto !important;
+      display: block;
+      width: 100%;
+      max-width: 300px;
+    }
+    &.disabled {
+      .invest__item--img {
+        span {
+          background: #666666;
+          &:after {
+            background-image: url("../images/svg/gray-triangle.png");
+          }
+        }
+      }
+    }
+    &:hover {
+      .invest__item--img {
+        img {
+          opacity: 0.8;
+        }
+        span {
+          padding-left: 15px;
+        }
+      }
+      h3 {
+        color: $orange;
+      }
+    }
+    &--img {
+      position: relative;
+      background: #000;
+      img {
+        width: 100%;
+        transition: all 0.3s ;
+        display: block;
+        -webkit-backface-visibility: hidden;
+
+      }
+
+
+      span {
+        position: absolute;
+        left: 0;
+        bottom: -12px;
+        color: #FFF;
+        text-transform: uppercase;
+        background: $orange;
+        font-size: 19px;
+        padding: 5px 46px 6px 9px;
+        transition: all 0.3s;
+        @include breakpoint(tablet) {
+          font-size: 16px;
+          padding: 5px 30px 6px 9px;
+        }
+        @include breakpoint(mobile) {
+          font-size: 16px;
+          bottom: -9px;
+          padding: 9px 9px 8px 17px;
+        }
+        &:after {
+          right: -16px;
+          content: "";
+          position: absolute;
+          background: url("../images/svg/orange-triangle.png");
+          width: 16px;
+          top: -1px;
+          bottom: 0;
+
+        }
+      }
+    }
+    h3 {
+      color: $blue;
+      margin: 49px 0 31px 0;
+      font-size: 43px;
+      line-height: 43px;
+      transition: 0.3s all;
+      @include breakpoint(tablet) {
+        font-size: 30px;
+        margin: 33px 0 10px 0;
+        line-height: 35px;
+      }
+      @include breakpoint(mobile) {
+        margin: 25px 0 10px 0;
+      }
+      span {
+        font-size: 31px;
+        font-weight: 300;
+        display: block;
+        @include breakpoint(tablet) {
+          font-size: 24px;
+        }
+      }
+    }
+    p {
+      font-size: 19px;
+      line-height: 25px;
+      max-width: 270px;
+      font-weight: 300;
+      color: $blue;
+      @include breakpoint(tablet) {
+        font-size: 16px;
+        line-height: 25px;
+        margin: 0;
+      }
+    }
+  }
+}

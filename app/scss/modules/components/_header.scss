@@ -1,0 +1,285 @@
+.header {
+  margin-bottom: 35px;
+  @include breakpoint(tablet) {
+    margin-bottom: 17px;
+  }
+  @include breakpoint(mobile) {
+    margin-bottom: 11px;
+  }
+  .container {
+    position: relative;
+  }
+  &__lang {
+    position: absolute;
+    right: 350px;
+    top: 61px;
+    @include breakpoint(tablet) {
+      right: 20px;
+      top: 4px;
+      z-index: 143;
+    }
+    @include breakpoint(mobile) {
+      top: 0px;
+    }
+    @media all and (max-width: 370px) {
+      top: 7px;
+    }
+    a {
+      display: inline-block;
+      border: 1px solid #c8c8c8;
+      padding: 1px;
+      opacity: 0.5;
+      img {
+        display: block;
+        @include breakpoint(mobile) {
+          height: 10px;
+        }
+      }
+      &.active {
+        opacity: 1;
+      }
+    }
+  }
+  &__logo {
+    display: inline-block;
+    margin: 35px 0 0 56px;
+    width: 100%;
+    max-width: 280px;
+    @include breakpoint(tablet) {
+      margin: 56px 0 0 0px;
+    }
+    @include breakpoint(mobile) {
+      margin: 51px 0 -4px 0;
+      max-width: 172px;
+    }
+    img {
+      max-width: 100%;
+    }
+  }
+  .menu-toggle {
+    @include breakpoint(tablet) {
+      position: absolute;
+      width: 91px;
+      height: 53px;
+      background: url("../images/svg/hamburger-menu.svg") center no-repeat;
+      background-size: 100% 100%;
+      right: 20px;
+      top: 68px;
+    }
+    @include breakpoint(mobile) {
+      right: 15px;
+      top: 44px;
+      width: 68px;
+    }
+  }
+  &__question {
+    position: absolute;
+    right: 15px;
+    border-radius: 50%;
+    text-align: center;
+    background: #25253a;
+    width: 280px;
+    height: 280px;
+    top: -60px;
+    overflow: hidden;
+    padding: 72px 0 0 0;
+    z-index: 100;
+    -webkit-box-shadow: 10px 15px 10px 0 rgba(0,0,0,0.1);
+    box-shadow: 10px 15px 10px 0 rgba(0,0,0,0.1);
+    hr {
+      margin-bottom: 9px;
+      margin-top: -7px;
+    }
+    @include breakpoint(tablet) {
+      left: 0;
+      right: 0;
+      border-radius: 0;
+      text-align: left;
+      width: auto;
+      height: auto;
+      top:0;
+      padding: 5px 10px 5px 10px;
+      box-shadow: none;
+      br {
+        display: none;
+      }
+    }
+    @include breakpoint(mobile) {
+      padding: 0px 80px 5px 7px;
+      line-height: 16px;
+    }
+    p {
+      color: #FFF;
+      font-size: 26px;
+      line-height: 30px;
+      margin: 0;
+      font-weight: 300;
+      @include breakpoint(tablet) {
+        display: inline-block;
+        font-size: 16px;
+        line-height: 16px;
+      }
+      @include breakpoint(mobile) {
+        font-size: 10px;
+        line-height: 10px;
+      }
+      &.line1 {
+        a {
+          font-size: 18px;
+          display: block;
+          margin: 12px 0 15px 0;
+        }
+      }
+    }
+    hr {
+      @include breakpoint(tablet) {
+        display: none;
+      }
+    }
+    .orange {
+      color: $orange;
+    }
+    a {
+      color: #FFF;
+      text-decoration: none;
+      font-size: 24px;
+      display: block;
+      letter-spacing: -0.9px;
+      @include breakpoint(tablet) {
+        display: inline !important;
+        margin: 0 5px;
+        font-size: 18px !important;
+      }
+      @include breakpoint(mobile) {
+        font-size: 10px !important;
+        line-height: 10px !important;
+        margin: 0 2px 0 0 !important;
+      }
+    }
+  }
+  nav {
+    display: block;
+    @include breakpoint(tabletup) {
+      display: block !important;
+    }
+    @include breakpoint(tablet) {
+      position: absolute;
+      left: 0;
+      right: 0;
+      background: #FFF;
+      z-index: 110;
+      display: none;
+    }
+    ul {
+      margin: 20px 0 0 12px;
+      padding: 0;
+      list-style: none;
+      position: relative;
+      @include breakpoint(tablet) {
+        margin: 34px 0 30px 0;
+      }
+      &:after {
+        position: absolute;
+        top: 50%;
+        background: $blue;
+        left: 0;
+        right: 230px;
+        content: "";
+        height: 2px;
+        margin-top: -5px;
+        @include breakpoint(tablet) {
+          display: none;
+        }
+      }
+      @include breakpoint(tablet) {
+        br {
+          display: none;
+        }
+      }
+      li {
+        display: inline-block;
+        vertical-align: top;
+        margin: 0 45px 5px 0;
+        position: relative;
+        @include breakpoint(tablet) {
+          display: block;
+          margin: 0 0 10px 0;
+          text-align: center;
+        }
+        &.current {
+          &:not(:first-child) {
+            margin-left: -12px;
+            @include breakpoint(tablet) {
+              margin-left: 0;
+            }
+          }
+          a {
+            background: $blue;
+            color: #FFF;
+            position: relative;
+            padding-top: 4px;
+            &:after {
+              position: absolute;
+              background: url("../images/svg/menu-left.png");
+              background-size: 100% 100%;
+              content: "";
+              width: 20px;
+              top:0;
+              bottom: 0px;
+              left: -20px;
+              @include breakpoint(tablet) {
+                bottom: 0;
+              }
+            }
+            &:before {
+              position: absolute;
+              background: url("../images/svg/menu-right.png");
+              background-size: 100% 100%;
+              content: "";
+              width: 25px;
+              top:0;
+              bottom: 0px;
+              right: -25px;
+              @include breakpoint(tablet) {
+                bottom: 0;
+              }
+            }
+          }
+          &:after {
+            display: none;
+          }
+        }
+        &:not(.no-border) {
+          &:after {
+            position: absolute;
+            right: -27px;
+            top: -3px;
+            bottom: 0;
+            background: $blue;
+            width: 2px;
+            content: "";
+            transform: skewX(-20deg);
+            @include breakpoint(tablet) {
+              display: none;
+              text-align: center;
+            }
+          }
+        }
+
+        a {
+          color: $blue;
+          font-size: 22px;
+          text-decoration: none;
+          text-transform: uppercase;
+          padding: 2px 0;
+          @include breakpoint(mobile) {
+            font-size: 16px;
+          }
+          &:hover {
+            color: $orange;
+          }
+        }
+      }
+    }
+  }
+}

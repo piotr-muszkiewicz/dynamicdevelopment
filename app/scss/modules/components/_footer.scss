@@ -1,0 +1,189 @@
+.footer {
+  background: $blue;
+  margin-top: 238px;
+  min-height: 380px;
+  position: relative;
+  padding: 87px 0 0 0;
+  @include breakpoint(tablet) {
+    margin-top: 120px;
+    padding: 50px 0 0 0;
+    min-height: 354px;
+  }
+  @include breakpoint(mobile) {
+    padding: 42px 0 0 0;
+    min-height: 574px;
+  }
+  &:after {
+    position: absolute;
+    background: url("../images/svg/city-bg.svg") center top no-repeat;
+    background-size: 1920px 840px;
+    overflow: hidden;
+    height: 610px;
+    width: 100%;
+    z-index: 1;
+    content: "";
+    top: -233px;
+    left: 50%;
+    transform: translateX(-50%);
+    @include breakpoint(tablet) {
+      background-size: 1050px auto;
+      top:-133px;
+    }
+
+  }
+  .container {
+    position: relative;
+    z-index: 2;
+    @include breakpoint(mobile) {
+      overflow: hidden;
+      padding-bottom: 83px;
+    }
+  }
+  &__nav {
+    float: left;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    @include breakpoint(mobile) {
+      margin: 0 0 0 0;
+    }
+    li {
+      margin-bottom: 4px;
+      @include breakpoint(mobile) {
+        margin-bottom: 1px;
+      }
+      a {
+        color: #FFF;
+        text-decoration: none;
+        text-transform: uppercase;
+        font-size: 17px;
+        font-weight: 300;
+        letter-spacing: -0.5px;
+        &:hover {
+          color: $orange;
+        }
+      }
+    }
+  }
+  &__logo {
+    position: absolute;
+    left: 231px;
+    top: 80px;
+    max-width: 191px;
+    @include breakpoint(mobile) {
+      position: static;
+    }
+  }
+  &__fb {
+    @include breakpoint(tablet) {
+      img {
+        width: 50px;
+      }
+    }
+    @include breakpoint(mobile) {
+      img {
+        width: 37px;
+      }
+    }
+  }
+  &__right {
+    float: right;
+    width: 670px;
+    text-align: right;
+    margin: -23px 0 0 0;
+    @include breakpoint(tablet) {
+      width: 250px;
+      margin: -4px 0 0 0;
+    }
+    @include breakpoint(mobile) {
+      width: 100%;
+      margin: 10px 0 0 0;
+    }
+    h4 {
+      color: $white;
+      text-transform: uppercase;
+      font-weight: 300;
+      font-size: 23px;
+      letter-spacing: 6px;
+      margin: 49px 0 64px 0;
+      @include breakpoint(laptop) {
+        letter-spacing: 2px;
+      }
+      @include breakpoint(tablet) {
+        text-align: left;
+        letter-spacing: 0;
+        margin: 22px 0 83px 0;
+        line-height: 25px;
+      }
+      @include breakpoint(mobile) {
+        max-width: 219px;
+        font-size: 20px;
+        line-height: 24px;
+        letter-spacing: 5px;
+        margin: 2px 0 46px 0;
+      }
+    }
+    p {
+      margin: 0;
+      @include breakpoint(mobile) {
+        position: absolute;
+        bottom: 0;
+        text-align: left;
+      }
+      a {
+        display: block;
+        text-transform: uppercase;
+        font-size: 13px;
+        text-decoration: none;
+        color: #FFF;
+        margin: 0 0 11px 0;
+        &:hover {
+          color: $orange;
+        }
+      }
+      font-weight: 300;
+      color: #FFF;
+      font-size: 11px;
+    }
+  }
+}
+
+.partners {
+  padding: 34px 0 45px 0;
+  @include breakpoint(tablet) {
+    padding: 16px 0 15px 0;
+  }
+  img {
+    max-width: 100%;
+  }
+  &__title {
+    font-size: 16px;
+    font-weight: 300;
+    letter-spacing: 11px;
+    text-transform: uppercase;
+    color: $blue;
+    margin: 14px 0 39px 0;
+    @include breakpoint(tablet) {
+      margin: 14px 0 30px 0;
+    }
+  }
+  &__list {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    @include breakpoint(tablet) {
+      flex-wrap: wrap;
+    }
+    > div {
+      @include breakpoint(tablet) {
+        width: 25%;
+        text-align: center;
+        margin: 0 0 33px 0;
+      }
+      @include breakpoint(mobile) {
+        width: 50%;
+        margin-bottom: 20px;
+      }
+    }
+  }
+}

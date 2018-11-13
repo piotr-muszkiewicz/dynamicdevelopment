@@ -1,0 +1,277 @@
+.home-slider {
+  position: relative;
+  .slick-current {
+    h3 {
+      left: 50%;
+      opacity: 1;
+    }
+    h2 {
+      margin-top: 0;
+      opacity: 1;
+    }
+  }
+  h2 {
+    color: $white;
+    position: absolute;
+    left: 50%;
+    top:73px;
+    transform: translateX(-50%);
+    white-space: nowrap;
+    z-index: 100;
+    font-size: 50px;
+    font-weight: 300;
+    margin: 0;
+    margin-top: -300px;
+    padding: 8px 0;
+    border-top: 2px solid $white;
+    border-bottom: 2px solid $white;
+    transition: all 0.3s;
+    transition-delay: 0.6s;
+    opacity: 0;
+    z-index: 10;
+    @media all and (max-width: 1500px) {
+      font-size: 45px;
+    }
+    @include breakpoint(laptop) {
+      font-size: 40px;
+    }
+    @include breakpoint(tablet) {
+      transform: translateX(0);
+      left: 47px;
+      right: 46px;
+      top: 52px;
+      font-size: 36px;
+      text-align: center;
+      strong {
+        display: block;
+      }
+    }
+    @include breakpoint(mobile) {
+      left: 15px;
+      right: 15px;
+      font-size: 30px;
+      white-space: normal;
+      padding: 12px 25px;
+    }
+  }
+  h3 {
+    position: absolute;
+    top:50%;
+    left: 70%;
+    transform: translateX(-50%) translateY(-50%);
+    z-index: 90;
+    font-size: 92px;
+    line-height: 100px;
+    margin: 0;
+    padding: 15px 141px;
+    font-weight: 500;
+    color: $white;
+    background: url("../images/svg/slider-point-orange.svg") center no-repeat;
+    background-size: 120% auto;
+    overflow: hidden;
+    transition: all 0.3s;
+    transition-delay: 0.3s;
+    opacity: 0;
+    z-index: 10;
+    @media all and (max-width: 1500px) {
+      font-size: 50px;
+      line-height: 50px;
+    }
+    @include breakpoint(tablet) {
+      font-size: 40px;
+      padding: 7px 79px;
+      background-size: 100% auto;
+    }
+    @include breakpoint(mobile) {
+      top:250px;
+      transform: translateX(-50%) translateY(0);
+      font-size: 42px;
+      padding: 7px 86px;
+    }
+  }
+  &__bg {
+    height: 890px;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    overflow: hidden;
+    &:after {
+      position: absolute;
+      left: 0;
+      right: 0;
+      top:0;
+      bottom: 0;
+      background: rgba(0,0,0,0.2);
+      content: "";
+    }
+    @media all and (max-width: 1920px) {
+      height: 700px;
+    }
+    @media all and (max-width: 1500px) {
+      height: 600px;
+    }
+    @media all and (max-width: 1350px) {
+      height: 500px;
+    }
+    @include breakpoint(tablet) {
+      height: 490px;
+    }
+    @include breakpoint(mobile) {
+      height: 490px;
+    }
+  }
+  .slick-arrow {
+    position: absolute;
+    top:50%;
+    transform: translateY(-50%);
+    width: 73px;
+    height: 83px;
+    background-color: $blue;
+    text-indent: -9999px;
+    border: none;
+    z-index: 100;
+    background-size: auto 100%;
+    background-repeat: no-repeat;
+    transition: all 0.3s;
+    @include breakpoint(mobile) {
+      display: none !important;
+    }
+    &:hover {
+      background-color: $orange;
+    }
+  }
+  .slick-prev {
+    left: 0;
+    background-image: url("../images/svg/left-arrow.svg");
+    background-position: right;
+  }
+  .slick-next {
+    right: 0;
+    background-image: url("../images/svg/right-arrow.svg");
+    background-position: left;
+  }
+  .slick-dots {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 40px;
+    z-index: 90;
+    text-align: center;
+    @include breakpoint(tablet) {
+      bottom: 28px;
+    }
+    li {
+      vertical-align: top;
+      display: inline-block;
+      button {
+        border: none;
+        width: 35px;
+        height: 29px;
+        text-indent: -9999px;
+        background: url("../images/svg/slider-point-blue.svg");
+        background-size: 100% 100%;
+        transition: all 0.3s;
+      }
+      &:hover,
+      &.slick-active {
+        button {
+          background-image: url("../images/svg/slider-point-orange.svg");
+        }
+      }
+    }
+  }
+}
+
+.home-boxs {
+  padding: 95px 0 0 0;
+  @include breakpoint(tablet) {
+    padding: 68px 0 0 0;
+  }
+  @include breakpoint(mobile) {
+    padding: 57px 0 14px 0;
+    border-bottom: 1px solid #626271;
+  }
+  &__list {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid #626271;
+    padding-bottom: 51px;
+    @include breakpoint(tablet) {
+      flex-wrap: wrap;
+      max-width: 720px;
+      margin-left: auto;
+      margin-right: auto;
+      padding-bottom: 0;
+    }
+    @include breakpoint(mobile) {
+      border: none;
+    }
+    @include breakpoint(mobileonly) {
+      display: block;
+
+    }
+  }
+  &__item {
+    background: url("../images/svg/line.svg") right 15px top 11px no-repeat;
+    @include breakpoint(laptop) {
+      background-position: right 0px top 11px;
+    }
+    background-size: 100px 105px;
+    min-width: 240px;
+    padding-right: 15px;
+    @include breakpoint(tablet) {
+      width: 50%;
+      margin: 0 0 66px 0 !important;
+      padding-left: 63px;
+      border: none !important;
+      background-position: left 190px top 11px !important;
+    }
+    @include breakpoint(mobileonly) {
+      padding: 0;
+      width: 212px;
+      background-position: right -13px top 11px !important;
+      margin: 0 auto 42px auto !important;
+    }
+    &:not(:last-child) {
+      margin-right: 60px;
+      border-right: 1px solid #626271;
+      background-position: right 50px top 11px;
+      @include breakpoint(laptop) {
+        margin-right: 30px;
+        background-position: right 20px top 11px;
+      }
+    }
+    &:first-child {
+      background-position: right -16px top 11px;
+    }
+    &--icon {
+      height: 65px;
+      text-align: left;
+      display: flex;
+      align-items: center;
+      img {
+        height: 50px;
+        widht: 85px;
+      }
+    }
+    h3 {
+      font-size: 43px;
+      color: $blue;
+      margin: 7px 0 0 0;
+      line-height: 43px;
+      letter-spacing: -2px;
+      strong {
+        font-size: 63px;
+      }
+    }
+    p {
+      font-size: 19px;
+      font-weight: 600;
+      line-height: 28px;
+      margin: 8px 0 -5px 0;
+    }
+  }
+}

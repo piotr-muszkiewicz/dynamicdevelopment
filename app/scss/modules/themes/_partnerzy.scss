@@ -1,0 +1,30 @@
+.dynamic-logos-top {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  > a {
+    margin:60px 40px 80px 40px;
+    @include breakpoint(mobileonly) {
+      width: 100%;
+      margin: 30px 20px;
+      text-align: center;
+    }
+  }
+}
+.dynamic-logos-bottom {
+  display: flex;
+  flex-wrap: wrap;
+  > a,
+  > div {
+    width: 25%;
+    text-align: center;
+    margin: 0 0 50px 0;
+    img {
+      max-width: 100%;
+    }
+    @include breakpoint(mobile) {
+      width: 50%;
+    }
+  }
+}
